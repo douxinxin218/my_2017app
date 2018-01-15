@@ -5,11 +5,12 @@
   "repository": "https://github.com/douxinxin218/my_2017app.git",
   "author": "dx <992714544@qq.com>",
   "license": "MIT",
-  "scripts":{
-    "dev":"webpack-dev-server --port 8000 --open",
-    "build":"webpack"
+  "scripts": {
+    "dev": "webpack-dev-server --port 8000 --open",
+    "build": "webpack"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",

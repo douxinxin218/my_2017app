@@ -6,8 +6,24 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="src/css/reset.min.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_479220_6t4zejzvn2fenrk9.css">
     <script>
-        (function(){
+
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth > 640) clientWidth = 640;
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+       /* (function(){
             let computed=function(){
                 let deviceW=document.documentElement.clientWidth;
                 if(deviceW>640) return;
@@ -15,7 +31,7 @@
             }
             computed();
             window.addEventListener('resize',computed)
-        })()
+        })()*/
     </script>
 </head>
 
