@@ -3,7 +3,7 @@ export default class Mine extends Component{
     render(){
         return (
             <div>
-               个人中心
+               个人中心jshgshlhjfkss
             </div>
         )
     }
